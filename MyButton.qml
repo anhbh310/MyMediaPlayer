@@ -86,8 +86,8 @@ MouseEvent {
 
             Image {
                 id: icon
-                width: parent.height * 0.5
-                height: parent.height * 0.5
+                width: parent.height * 0.7
+                height: parent.height * 0.7
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
             }
@@ -103,10 +103,12 @@ MouseEvent {
             Text {
                 id: label
                 text: qsTr("Button")
-                font.weight: Font.Thin
+                font.weight: Font.Bold
+                font.family: "Arial"
+                color: "#52902f"
                 anchors.fill: parent
                 verticalAlignment: Text.AlignVCenter
-                font.pointSize: 11
+                font.pointSize: 12
             }
         }
     }

@@ -23,5 +23,6 @@
         <file>icon/gsearch.png</file>
         <file>icon/gsetting.png</file>
         <file>icon/gvid.png</file>
+        <file>ButtonCluster.qml</file>
     </qresource>
 </RCC>
