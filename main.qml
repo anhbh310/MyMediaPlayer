@@ -84,6 +84,15 @@ Window {
                                 anchors.left: parent.left
                                 anchors.leftMargin: 0
                                 source: "icon/gvid.png"
+
+                                MouseArea{
+                                    anchors.fill: parent
+                                    onClicked: {
+                                        media_player.state = "off"
+                                        media_browser.state = "on"
+
+                                    }
+                                }
                             }
 
                             MyButton {
@@ -161,7 +170,7 @@ Window {
             transitions: Transition {
                 NumberAnimation{
                     properties: "opacity"
-                    duration: 300
+                    duration: 600
                 }
             }
 
@@ -180,6 +189,7 @@ Window {
                     x: 40
                     y: 25
                     color: "#3c5a01"
+
                 }
             }
 

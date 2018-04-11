@@ -25,4 +25,11 @@ Rectangle{
             }
         }
     ]
+
+    transitions: Transition {
+        NumberAnimation{
+            properties: "opacity"
+            duration: 600
+        }
+    }
 }
