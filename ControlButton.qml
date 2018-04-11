@@ -7,7 +7,7 @@ MouseEvent {
     width: 70
     height: 70
 
-    hoverColor: "#80144f78"
+    hoverColor: "#aeff5e"
     radius: 35
     clip: false
 

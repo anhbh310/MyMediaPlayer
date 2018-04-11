@@ -85,6 +85,7 @@ MouseEvent {
                     onClicked: {
                         media_browser.state = "off"
                         media_player.state = "on"
+                        media_player.visible = true
                     }
                 }
 
