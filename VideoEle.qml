@@ -84,7 +84,7 @@ MouseEvent {
                     anchors.fill: parent
                     onClicked: {
                         media_browser.state = "off"
-                        MediaPlayer.state = "on"
+                        media_player.state = "on"
                     }
                 }
 

@@ -11,6 +11,11 @@ Window {
     minimumWidth: 900
     minimumHeight: 600
 
+    MediaPlayer{
+        id:media_player
+        opacity: 0
+    }
+
     RowLayout{
         width: 150
         height: 150
@@ -209,4 +214,6 @@ Window {
         }
 
     }
+
+
 }

@@ -10,7 +10,7 @@ Rectangle{
         State {
             name: "on"
             PropertyChanges {
-                target: MediaPlayer
+                target: media_player
                 opacity: 1.0
 
             }
@@ -19,7 +19,7 @@ Rectangle{
         State {
             name: "off"
             PropertyChanges {
-                target: MediaPlayer
+                target: media_player
                 opacity:0
 
             }
