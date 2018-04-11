@@ -5,10 +5,10 @@ import QtQuick.Controls 1.4
 
 Window {
     visible: true
-    width: 1000
+    width: 1200
     height: 800
     title: qsTr("My Media Player")
-    minimumWidth: 800
+    minimumWidth: 900
     minimumHeight: 600
 
     RowLayout{
@@ -50,8 +50,6 @@ Window {
                         id: srch
                         width: parent.width
                         height: 50
-                        //                            anchors.top: logo.bottom
-                        //                            anchors.topMargin: 20
 
                         SearchBar{
                             anchors.fill: parent
@@ -131,13 +129,40 @@ Window {
         }
 
         Column{
+            id:  media_browser
             spacing: 0
             Layout.fillHeight: true
             Layout.fillWidth: true
 
+            states: [
+                State {
+                    name: "on"
+                    PropertyChanges {
+                        target: media_browser
+                        opacity: 1.0
+
+                    }
+                },
+                State {
+                    name: "off"
+                    PropertyChanges {
+                        target: media_browser
+                        opacity: 0
+
+                    }
+                }
+            ]
+
+            transitions: Transition {
+                NumberAnimation{
+                    properties: "opacity"
+                    duration: 300
+                }
+            }
+
             StackView{
                 width: 200
-                height: 200
+                height: 120
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignTop | Qt.AlignLeft
 
@@ -151,6 +176,38 @@ Window {
                     y: 25
                     color: "#3c5a01"
                 }
+            }
+
+            StackLayout{
+                width: parent.width
+                height: parent.height
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+
+                Row{
+                    width: parent.width
+                    height: parent.height
+
+                    GridView{
+                        anchors.rightMargin: 0
+                        anchors.leftMargin: 30
+                        clip: true
+                        anchors.fill: parent
+                        model: 24
+                        cellWidth: 300
+                        cellHeight: 200
+                        delegate: VideoEle{
+                            imageSource: if (index % 4 == 0) { "icon/io.jpg" }
+                                         else if (index % 4 == 1){"icon/kotol.jpg"}
+                                         else if (index % 4 == 2){"icon/earthspirit.jpg"}
+                                         else {"icon/tusk.jpg"}
+                            onClicked: {
+                                media_browser.state = "off"
+                                MediaPlayer.state = "on"
+                            }
+                        }
+                    }
+               }
             }
         }
 

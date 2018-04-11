@@ -24,5 +24,13 @@
         <file>icon/gsetting.png</file>
         <file>icon/gvid.png</file>
         <file>ButtonCluster.qml</file>
+        <file>VideoEle.qml</file>
+        <file>icon/earthspirit.jpg</file>
+        <file>icon/io.jpg</file>
+        <file>icon/kotol.jpg</file>
+        <file>icon/tusk.jpg</file>
+        <file>ControlButton.qml</file>
+        <file>icon/tri.png</file>
+        <file>MediaPlayer.qml</file>
     </qresource>
 </RCC>
