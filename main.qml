@@ -11,10 +11,38 @@ Window {
     minimumWidth: 900
     minimumHeight: 600
 
-    MediaPlayer{
-        id:media_player
-        opacity: 0
-    }
+//   Column{
+//        id:row_mp
+//        width: parent.width
+//        height: parent.height
+//        spacing: 0
+//        anchors.fill: parent
+
+//        Rectangle {
+//            width: 250
+//            height: 400
+//            color: "#f00"
+//        }
+
+//        Column{
+//            width: row_mp.width - 250
+
+//            MediaPlayer{
+//                id:media_player
+//                opacity: 0
+//            }
+//        }
+
+//    }
+
+   MediaPlayer{
+       id:media_player
+       opacity: 0
+       width: media_browser.width
+
+   }
+
+
 
     RowLayout{
         width: 150
@@ -23,6 +51,7 @@ Window {
         anchors.fill: parent
 
         Column {
+            id:colum_menu
             width: 250
             height: 400
             Layout.fillHeight: true
