@@ -201,10 +201,7 @@ Window {
                                          else if (index % 4 == 1){"icon/kotol.jpg"}
                                          else if (index % 4 == 2){"icon/earthspirit.jpg"}
                                          else {"icon/tusk.jpg"}
-                            onClicked: {
-                                media_browser.state = "off"
-                                MediaPlayer.state = "on"
-                            }
+
                         }
                     }
                }

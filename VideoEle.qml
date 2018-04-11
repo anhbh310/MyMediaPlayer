@@ -80,31 +80,13 @@ MouseEvent {
                 anchors.topMargin: 50
                 imageSource: "icon/tri.png"
 
-//                MouseArea{
-//                    anchors.fill: parent
-//                    onClicked: {
-//                        media_browser.state = "on"
-//                        media_browser.state = "off"
-//                    }
-//                states: [
-//                    State {
-//                        name: "on"
-//                        PropertyChanges {
-//                            target: MediaPlayer
-//                            opacity: 1
-
-//                        }
-//                    },
-//                    State {
-//                        name: "on"
-//                        PropertyChanges {
-//                            target: media_browser
-//                            opacity: 0
-
-//                        }
-//                    }
-//                ]
-//                }
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked: {
+                        media_browser.state = "off"
+                        MediaPlayer.state = "on"
+                    }
+                }
 
             }
         }
