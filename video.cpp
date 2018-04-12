@@ -59,4 +59,7 @@ Qt::ItemFlags Video::flags(const QModelIndex &index) const
 
 QHash<int, QByteArray> Video::roleNames() const
 {
+    QHash<int, QByteArray> names;
+    names[Video_Thumbnail]="thumbnail";
+    return names;
 }
