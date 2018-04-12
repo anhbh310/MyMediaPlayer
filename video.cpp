@@ -31,9 +31,21 @@ QVariant Video::data(const QModelIndex &index, int role) const
         retVal= "4:20";
         break;
     case Video_Thumbnail:
-        retVal= "icon/io.jpg";
-        break;
-    default:
+        int tmp = qrand()%4;
+        switch (tmp) {
+        case 0:
+            retVal= "icon/io.jpg";
+            break;
+        case 1:
+            retVal= "icon/kotol.jpg";
+            break;
+        case 2:
+            retVal= "icon/tusk.jpg";
+            break;
+        case 3:
+            retVal= "icon/earthspirit.jpg";
+            break;
+        }
         break;
     }
     return retVal;
@@ -61,5 +73,7 @@ QHash<int, QByteArray> Video::roleNames() const
 {
     QHash<int, QByteArray> names;
     names[Video_Thumbnail]="thumbnail";
+    names[Video_Name]="name";
+    names[Video_Duration]="duration";
     return names;
 }
