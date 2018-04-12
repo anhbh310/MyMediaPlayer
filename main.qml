@@ -3,6 +3,7 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 1.4
 
+import Video 1.0
 Window {
     visible: true
     width: 1200
@@ -205,15 +206,15 @@ Window {
                         anchors.leftMargin: 30
                         clip: true
                         anchors.fill: parent
-                        model: 24
+                        model: Video{}
                         cellWidth: 300
                         cellHeight: 200
                         delegate: VideoEle{
-                            imageSource: if (index % 4 == 0) { "icon/io.jpg" }
-                                         else if (index % 4 == 1){"icon/kotol.jpg"}
-                                         else if (index % 4 == 2){"icon/earthspirit.jpg"}
-                                         else {"icon/tusk.jpg"}
-
+//                            imageSource: if (index % 4 == 0) { "icon/io.jpg" }
+//                                         else if (index % 4 == 1){"icon/kotol.jpg"}
+//                                         else if (index % 4 == 2){"icon/earthspirit.jpg"}
+//                                         else {"icon/tusk.jpg"}
+                            imageSource: model.thumbnail
                         }
                     }
                 }
