@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>icon/backward.png</file>
+        <file>icon/blue_player.png</file>
+        <file>icon/first_track.png</file>
+        <file>icon/forward.png</file>
+        <file>icon/last_track.png</file>
+        <file>icon/logo.png</file>
+        <file>icon/mute.png</file>
+        <file>icon/pause.png</file>
+        <file>icon/play.png</file>
+        <file>icon/stop.png</file>
+        <file>icon/volume1.png</file>
+        <file>icon/volume2.png</file>
+        <file>icon/volume3.png</file>
+        <file>icon/yellow_player.png</file>
+        <file>MouseEvent.qml</file>
+        <file>SearchBar.qml</file>
+        <file>MyButton.qml</file>
+        <file>icon/gabout.png</file>
+        <file>icon/gclock.png</file>
+        <file>icon/gsearch.png</file>
+        <file>icon/gsetting.png</file>
+        <file>icon/gvid.png</file>
+        <file>ButtonCluster.qml</file>
+        <file>VideoEle.qml</file>
+        <file>icon/earthspirit.jpg</file>
+        <file>icon/io.jpg</file>
+        <file>icon/kotol.jpg</file>
+        <file>icon/tusk.jpg</file>
+        <file>ControlButton.qml</file>
+        <file>icon/tri.png</file>
+        <file>MediaPlayer.qml</file>
+    </qresource>
+</RCC>
