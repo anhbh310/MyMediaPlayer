@@ -15,7 +15,7 @@ MouseEvent {
         anchors.fill: parent
 
         TextInput {
-            id: textInput
+            id: edtSearch
             height: 24
             text: qsTr("")
             clip: true
@@ -37,7 +37,7 @@ MouseEvent {
         }
 
         MyButton {
-            id: iconButton
+            id: btnSearch
             maximumize: false
             width: 50
             height: 50

@@ -62,7 +62,7 @@ Window {
                         height: 280
                         width: parent.width
                         ButtonCluster{
-                            id: btns
+                            id: cluster
                             anchors.right: parent.right
                             anchors.rightMargin: 0
                             anchors.left: parent.left
@@ -71,6 +71,7 @@ Window {
                             anchors.topMargin: 20
 
                             MyButton {
+                                id: btnMyVid
                                 x: 0
                                 y: 0
                                 height: 70
@@ -94,6 +95,7 @@ Window {
                             }
 
                             MyButton {
+                                id: btnHis
                                 x: 0
                                 y: 70
                                 height: 70
@@ -107,6 +109,7 @@ Window {
                             }
 
                             MyButton {
+                                id: btnInfo
                                 x: 0
                                 y: 140
                                 height: 70
@@ -120,6 +123,7 @@ Window {
                             }
 
                             MyButton {
+                                id:btnSetting
                                 x: 0
                                 y: 210
                                 height: 70

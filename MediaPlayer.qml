@@ -88,42 +88,49 @@ Column{
                             spacing: 0
 
                             ControlButton {
+                                id: btnFt
                                 width: 50
                                 height: 50
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                                 imageSource: "icon/first_track.png"
                             }
                             ControlButton {
+                                id: btnBackward
                                 width: 50
                                 height: 50
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                                 imageSource: "icon/backward.png"
                             }
                             ControlButton {
+                                id: btnPlay
                                 width: 50
                                 height: 50
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                                 imageSource: "icon/play.png"
                             }
                             ControlButton {
+                                id: btnPause
                                 width: 50
                                 height: 50
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                                 imageSource: "icon/pause.png"
                             }
                             ControlButton {
+                                id:btnStop
                                 width: 50
                                 height: 50
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                                 imageSource: "icon/stop.png"
                             }
                             ControlButton {
+                                id: btnForward
                                 width: 50
                                 height: 50
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                                 imageSource: "icon/forward.png"
                             }
                             ControlButton {
+                                id:btnLt
                                 width: 50
                                 height: 50
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
@@ -146,7 +153,7 @@ Column{
                     anchors.fill: parent
 
                     ControlButton {
-                        id: customButton5
+                        id: btnVolume
                         width: 50
                         height: 50
                         anchors.left: parent.left
@@ -157,7 +164,7 @@ Column{
                     }
 
                     Slider {
-                        id: slider1
+                        id: sldVolume
                         height: 10
                         scale: 0.7
                         anchors.left: parent.left

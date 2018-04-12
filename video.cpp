@@ -30,6 +30,9 @@ QVariant Video::data(const QModelIndex &index, int role) const
     case Video_Duration:
         retVal= "4:20";
         break;
+    case Video_URL:
+        retVal= "video/day and night.mp4";//Nhap URL vao day
+        break;
     case Video_Thumbnail:
         int tmp = qrand()%4;
         switch (tmp) {
@@ -75,5 +78,6 @@ QHash<int, QByteArray> Video::roleNames() const
     names[Video_Thumbnail]="thumbnail";
     names[Video_Name]="name";
     names[Video_Duration]="duration";
+    names[Video_URL]="url";
     return names;
 }

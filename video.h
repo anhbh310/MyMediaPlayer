@@ -14,7 +14,8 @@ public:
         Name_Role = Qt::UserRole+1,
         Video_Name,
         Video_Duration,
-        Video_Thumbnail
+        Video_Thumbnail,
+        Video_URL
     };
 
     // Basic functionality:

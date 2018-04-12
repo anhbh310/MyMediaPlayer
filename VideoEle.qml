@@ -3,12 +3,12 @@ import QtQuick.Controls 2.2
 import QtGraphicalEffects 1.0
 
 MouseEvent {
-    id: albumItem
+    id: videoElement
     width: 150
     height: 200
     clip: false
     hoverColor: "#00ffffff"
-    property alias imageSource : img.source
+    property alias imageSource : thumbnail.source
 
     onEntered: {
         glowEffect.visible = true;
@@ -21,15 +21,15 @@ MouseEvent {
     Glow {
         id: glowEffect
         visible: false
-        anchors.fill: img
+        anchors.fill: thumbnail
         radius: 15
         samples: 17
         color: "#66808080"
-        source: img
+        source: thumbnail
     }
 
     Image {
-        id: img
+        id: thumbnail
         source: 'icon/io.jpg'
         width: 250
         height: 150
@@ -50,7 +50,7 @@ MouseEvent {
 
         NumberAnimation {
             id: onShow
-            target: buttonContainer
+            target: itmMnPlay
             properties: "opacity, scale"
             to: 1.0
             duration: 50
@@ -58,19 +58,19 @@ MouseEvent {
 
         NumberAnimation {
             id: onHide
-            target: buttonContainer
+            target: itmMnPlay
             properties: "opacity, scale"
             to: 0.0
             duration: 50
         }
 
         Item{
-            id: buttonContainer
+            id: itmMnPlay
             anchors.fill: parent
             opacity: 0
 
             ControlButton {
-                id: playBtn
+                id: btnMnPlay
                 width: 50
                 height: 50
                 bgColor: "#e0fea9"
@@ -94,20 +94,17 @@ MouseEvent {
     }
 
     Text {
-        id: albumLabel
+        id: txtVidName
         text: qsTr("WTF Daily")
         elide: Text.ElideRight
         anchors.right: parent.right
         anchors.rightMargin: 0
         anchors.left: parent.left
         anchors.leftMargin: 5
-        font.bold: true
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 25
         font.pixelSize: 16
     }
-
-
 
 }
 
