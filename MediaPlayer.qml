@@ -7,10 +7,10 @@ Column{
     width: parent.width
     height: parent.height
 
-    Rectangle{
+    Image{
         width: parent.width
         height: parent.height - 100
-        color:"#ff77bb"
+        source: "icon/dt.jpg"
     }
 
     Item {

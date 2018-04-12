@@ -32,5 +32,6 @@
         <file>ControlButton.qml</file>
         <file>icon/tri.png</file>
         <file>MediaPlayer.qml</file>
+        <file>icon/dt.jpg</file>
     </qresource>
 </RCC>
