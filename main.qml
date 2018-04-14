@@ -3,7 +3,7 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 1.4
 
-import Video 1.0
+import MyVideo 1.0
 Window {
     visible: true
     width: 1200
@@ -75,7 +75,7 @@ Window {
                                 x: 0
                                 y: 0
                                 height: 70
-                                text: "My Video"
+                                text: "My MyVideo"
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
@@ -185,7 +185,7 @@ Window {
                 Label{
                     width: 150
                     height: 50
-                    text: qsTr("My Video")
+                    text: qsTr("MyVideo")
                     font.pointSize: 36
                     font.bold: true
                     x: 40
@@ -210,7 +210,7 @@ Window {
                         anchors.leftMargin: 30
                         clip: true
                         anchors.fill: parent
-                        model: Video{}
+                        model: MyVideo{}
                         cellWidth: 300
                         cellHeight: 200
                         delegate: VideoEle{

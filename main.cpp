@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
 
-   qmlRegisterType<Video>("Video",1,0,"Video");
+   qmlRegisterType<MyVideo>("MyVideo",1,0,"MyVideo");
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
