@@ -219,6 +219,7 @@ Window {
 //                                         else if (index % 4 == 2){"icon/earthspirit.jpg"}
 //                                         else {"icon/tusk.jpg"}
                             imageSource: model.thumbnail
+                            nameSource: model.name
                         }
                     }
                 }

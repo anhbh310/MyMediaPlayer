@@ -3,6 +3,13 @@
 
 #include <QAbstractListModel>
 
+struct MV
+{
+    QString name;
+    QString duration;
+    QString thumbnail;
+    QString url;
+};
 class MyVideo : public QAbstractListModel
 {
     Q_OBJECT
@@ -32,6 +39,7 @@ public:
     virtual QHash<int, QByteArray> roleNames() const override;
 
 private:
+    QVector<MV> myList;
 };
 
 #endif // MyVideo_H

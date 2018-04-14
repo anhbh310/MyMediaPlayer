@@ -9,6 +9,7 @@ MouseEvent {
     clip: false
     hoverColor: "#00ffffff"
     property alias imageSource : thumbnail.source
+    property alias nameSource : txtVidName.text
 
     onEntered: {
         glowEffect.visible = true;
