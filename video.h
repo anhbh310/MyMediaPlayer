@@ -3,12 +3,15 @@
 
 #include <QAbstractListModel>
 
-struct MV
+class MV
 {
+public:
     QString name;
     QString duration;
     QString thumbnail;
     QString url;
+
+    void setValue(QString tname, QString tduration, QString tthumbnail, QString turl);
 };
 class MyVideo : public QAbstractListModel
 {

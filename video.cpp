@@ -4,6 +4,7 @@ MyVideo::MyVideo(QObject *parent)
     : QAbstractListModel(parent)
 {
     for (int i=1;i<=10000;i++){
+        MV t;
         QString name = "DailyWTF " + QString::number(i);
         QString duration = QString::number(qrand()%5 - qrand()%2)+":"+QString::number(qrand()%60);
         QString thumbnail="";
@@ -25,7 +26,8 @@ MyVideo::MyVideo(QObject *parent)
             break;
         }
         QString url="";
-        myList.append({name,duration,thumbnail,url});
+        t.setValue(name,duration,thumbnail, url);
+        myList.append(t);
     }
 }
 
@@ -90,4 +92,13 @@ QHash<int, QByteArray> MyVideo::roleNames() const
     names[MyVideo_Duration]="duration";
     names[MyVideo_URL]="url";
     return names;
+}
+
+
+void MV::setValue(QString tname, QString tduration, QString tthumbnail, QString turl)
+{
+    name=tname;
+    duration=tduration;
+    thumbnail=tthumbnail;
+    url=turl;
 }
