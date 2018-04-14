@@ -33,5 +33,6 @@
         <file>icon/tri.png</file>
         <file>MediaPlayer.qml</file>
         <file>icon/dt.jpg</file>
+        <file>video/test.AVI</file>
     </qresource>
 </RCC>

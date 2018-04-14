@@ -1,16 +1,31 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
+import QtMultimedia 5.9
 
 Column{
     id: media_player
     width: parent.width
     height: parent.height
 
-    Image{
+//    Image{
+//        width: parent.width
+//        height: parent.height - 100
+//        source: "icon/dt.jpg"
+//    }
+
+    Rectangle{
         width: parent.width
         height: parent.height - 100
-        source: "icon/dt.jpg"
+        color: "#ff77bb"
+        Video{
+            id:vidPl
+            width: parent.width -10
+            height: parent.height -10
+            focus: true
+            source: "video/test.AVI"
+        }
+
     }
 
     Item {
@@ -107,6 +122,7 @@ Column{
                                 height: 50
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                                 imageSource: "icon/play.png"
+                                onClicked: vidPl.play()
                             }
                             ControlButton {
                                 id: btnPause

@@ -3,7 +3,7 @@
 MyVideo::MyVideo(QObject *parent)
     : QAbstractListModel(parent)
 {
-    for (int i=1;i<=10000;i++){
+    for (int i=1;i<=10;i++){
         MV t;
         QString name = "DailyWTF " + QString::number(i);
         QString duration = QString::number(qrand()%5 - qrand()%2)+":"+QString::number(qrand()%60);
