@@ -31,8 +31,9 @@
         <file>icon/tusk.jpg</file>
         <file>ControlButton.qml</file>
         <file>icon/tri.png</file>
-        <file>MediaPlayer.qml</file>
+        <file>PlayVideo.qml</file>
         <file>icon/dt.jpg</file>
-        <file>video/test.AVI</file>
+        <file>video/BRav1.avi</file>
+        <file>video/bloh.mp4</file>
     </qresource>
 </RCC>

@@ -6,11 +6,11 @@ import QtQuick.Controls 1.4
 import MyVideo 1.0
 Window {
     visible: true
-    width: 1200
-    height: 800
     title: qsTr("My Media Player")
-    minimumWidth: 900
-    minimumHeight: 600
+    maximumWidth: 1200
+    maximumHeight: 700
+    minimumWidth: 1200
+    minimumHeight: 700
 
     RowLayout{
         width: 150
@@ -75,7 +75,7 @@ Window {
                                 x: 0
                                 y: 0
                                 height: 70
-                                text: "My MyVideo"
+                                text: "My Video"
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
@@ -185,7 +185,7 @@ Window {
                 Label{
                     width: 150
                     height: 50
-                    text: qsTr("MyVideo")
+                    text: qsTr("My Video")
                     font.pointSize: 36
                     font.bold: true
                     x: 40
@@ -214,10 +214,6 @@ Window {
                         cellWidth: 300
                         cellHeight: 200
                         delegate: VideoEle{
-//                            imageSource: if (index % 4 == 0) { "icon/io.jpg" }
-//                                         else if (index % 4 == 1){"icon/kotol.jpg"}
-//                                         else if (index % 4 == 2){"icon/earthspirit.jpg"}
-//                                         else {"icon/tusk.jpg"}
                             imageSource: model.thumbnail
                             nameSource: model.name
                         }
@@ -226,7 +222,7 @@ Window {
             }
         }
 
-        MediaPlayer{
+        PlayVideo{
             id:media_player
             opacity: 0
             width: media_browser.width
