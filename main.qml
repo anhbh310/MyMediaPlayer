@@ -75,7 +75,7 @@ Window {
                                 x: 0
                                 y: 0
                                 height: 70
-                                text: "My Video"
+                                text: qsTr("My Video")
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
@@ -99,7 +99,7 @@ Window {
                                 x: 0
                                 y: 70
                                 height: 70
-                                text: "Recent Watch"
+                                text: qsTr("Recent Watch")
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
@@ -113,7 +113,7 @@ Window {
                                 x: 0
                                 y: 140
                                 height: 70
-                                text: "About Us"
+                                text: qsTr("About Us")
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
@@ -127,7 +127,7 @@ Window {
                                 x: 0
                                 y: 210
                                 height: 70
-                                text: "Setting"
+                                text: qsTr("Setting")
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
