@@ -1,11 +1,37 @@
 #include "video.h"
 
-Video::Video(QObject *parent)
+MyVideo::MyVideo(QObject *parent)
     : QAbstractListModel(parent)
 {
+    for (int i=1;i<=10;i++){
+        MV t;
+        QString name = "DailyWTF " + QString::number(i);
+        QString duration = QString::number(qrand()%5 - qrand()%2)+":"+QString::number(qrand()%60);
+        QString thumbnail="";
+        int tmp = qrand()%4;
+        switch (tmp) {
+        case 0:
+            thumbnail ="icon/io.jpg";
+            break;
+        case 1:
+            thumbnail ="icon/kotol.jpg";
+            break;
+        case 2:
+            thumbnail ="icon/tusk.jpg";
+            break;
+        case 3:
+            thumbnail ="icon/earthspirit.jpg";
+            break;
+        default:
+            break;
+        }
+        QString url="";
+        t.setValue(name,duration,thumbnail, url);
+        myList.append(t);
+    }
 }
 
-int Video::rowCount(const QModelIndex &parent) const
+int MyVideo::rowCount(const QModelIndex &parent) const
 {
     // For list models only the root node (an invalid parent) should return the list's size. For all
     // other (valid) parents, rowCount() should return 0 so that it does not become a tree model.
@@ -13,45 +39,34 @@ int Video::rowCount(const QModelIndex &parent) const
         return 0;
 
     // FIXME: Implement me!
-    return 10000;
+    return myList.size();
 }
 
-QVariant Video::data(const QModelIndex &index, int role) const
+QVariant MyVideo::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid())
         return QVariant();
-
+    const MV t = myList.at(index.row());
     // FIXME: Implement me!
     QVariant retVal = QVariant();
     switch (role) {
-    case Video_Name:
-        retVal= "Dota WTF";
+    case MyVideo_Name:
+        retVal= t.name;
         break;
-    case Video_Duration:
-        retVal= "4:20";
+    case MyVideo_Duration:
+        retVal= t.duration;
         break;
-    case Video_Thumbnail:
-        int tmp = qrand()%4;
-        switch (tmp) {
-        case 0:
-            retVal= "icon/io.jpg";
-            break;
-        case 1:
-            retVal= "icon/kotol.jpg";
-            break;
-        case 2:
-            retVal= "icon/tusk.jpg";
-            break;
-        case 3:
-            retVal= "icon/earthspirit.jpg";
-            break;
-        }
+    case MyVideo_URL:
+        retVal= t.url;
+        break;
+    case MyVideo_Thumbnail:
+        retVal=t.thumbnail;
         break;
     }
     return retVal;
 }
 
-bool Video::setData(const QModelIndex &index, const QVariant &value, int role)
+bool MyVideo::setData(const QModelIndex &index, const QVariant &value, int role)
 {
     if (data(index, role) != value) {
         // FIXME: Implement me!
@@ -61,7 +76,7 @@ bool Video::setData(const QModelIndex &index, const QVariant &value, int role)
     return false;
 }
 
-Qt::ItemFlags Video::flags(const QModelIndex &index) const
+Qt::ItemFlags MyVideo::flags(const QModelIndex &index) const
 {
     if (!index.isValid())
         return Qt::NoItemFlags;
@@ -69,11 +84,21 @@ Qt::ItemFlags Video::flags(const QModelIndex &index) const
     return Qt::ItemIsEditable; // FIXME: Implement me!
 }
 
-QHash<int, QByteArray> Video::roleNames() const
+QHash<int, QByteArray> MyVideo::roleNames() const
 {
     QHash<int, QByteArray> names;
-    names[Video_Thumbnail]="thumbnail";
-    names[Video_Name]="name";
-    names[Video_Duration]="duration";
+    names[MyVideo_Thumbnail]="thumbnail";
+    names[MyVideo_Name]="name";
+    names[MyVideo_Duration]="duration";
+    names[MyVideo_URL]="url";
     return names;
+}
+
+
+void MV::setValue(QString tname, QString tduration, QString tthumbnail, QString turl)
+{
+    name=tname;
+    duration=tduration;
+    thumbnail=tthumbnail;
+    url=turl;
 }

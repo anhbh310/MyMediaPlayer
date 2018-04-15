@@ -3,14 +3,14 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 1.4
 
-import Video 1.0
+import MyVideo 1.0
 Window {
     visible: true
-    width: 1200
-    height: 800
     title: qsTr("My Media Player")
-    minimumWidth: 900
-    minimumHeight: 600
+    maximumWidth: 1200
+    maximumHeight: 700
+    minimumWidth: 1200
+    minimumHeight: 700
 
     RowLayout{
         width: 150
@@ -62,7 +62,7 @@ Window {
                         height: 280
                         width: parent.width
                         ButtonCluster{
-                            id: btns
+                            id: cluster
                             anchors.right: parent.right
                             anchors.rightMargin: 0
                             anchors.left: parent.left
@@ -71,10 +71,11 @@ Window {
                             anchors.topMargin: 20
 
                             MyButton {
+                                id: btnMyVid
                                 x: 0
                                 y: 0
                                 height: 70
-                                text: "My Video"
+                                text: qsTr("My Video")
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
@@ -94,10 +95,11 @@ Window {
                             }
 
                             MyButton {
+                                id: btnHis
                                 x: 0
                                 y: 70
                                 height: 70
-                                text: "Recent Watch"
+                                text: qsTr("Recent Watch")
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
@@ -107,10 +109,11 @@ Window {
                             }
 
                             MyButton {
+                                id: btnInfo
                                 x: 0
                                 y: 140
                                 height: 70
-                                text: "About Us"
+                                text: qsTr("About Us")
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
@@ -120,10 +123,11 @@ Window {
                             }
 
                             MyButton {
+                                id:btnSetting
                                 x: 0
                                 y: 210
                                 height: 70
-                                text: "Setting"
+                                text: qsTr("Setting")
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
@@ -206,22 +210,19 @@ Window {
                         anchors.leftMargin: 30
                         clip: true
                         anchors.fill: parent
-                        model: Video{}
+                        model: MyVideo{}
                         cellWidth: 300
                         cellHeight: 200
                         delegate: VideoEle{
-//                            imageSource: if (index % 4 == 0) { "icon/io.jpg" }
-//                                         else if (index % 4 == 1){"icon/kotol.jpg"}
-//                                         else if (index % 4 == 2){"icon/earthspirit.jpg"}
-//                                         else {"icon/tusk.jpg"}
                             imageSource: model.thumbnail
+                            nameSource: model.name
                         }
                     }
                 }
             }
         }
 
-        MediaPlayer{
+        PlayVideo{
             id:media_player
             opacity: 0
             width: media_browser.width

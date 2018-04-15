@@ -1,20 +1,31 @@
-#ifndef VIDEO_H
-#define VIDEO_H
+#ifndef MyVideo_H
+#define MyVideo_H
 
 #include <QAbstractListModel>
 
-class Video : public QAbstractListModel
+class MV
+{
+public:
+    QString name;
+    QString duration;
+    QString thumbnail;
+    QString url;
+
+    void setValue(QString tname, QString tduration, QString tthumbnail, QString turl);
+};
+class MyVideo : public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit Video(QObject *parent = nullptr);
+    explicit MyVideo(QObject *parent = nullptr);
 
     enum{
         Name_Role = Qt::UserRole+1,
-        Video_Name,
-        Video_Duration,
-        Video_Thumbnail
+        MyVideo_Name,
+        MyVideo_Duration,
+        MyVideo_Thumbnail,
+        MyVideo_URL
     };
 
     // Basic functionality:
@@ -31,6 +42,7 @@ public:
     virtual QHash<int, QByteArray> roleNames() const override;
 
 private:
+    QVector<MV> myList;
 };
 
-#endif // VIDEO_H
+#endif // MyVideo_H

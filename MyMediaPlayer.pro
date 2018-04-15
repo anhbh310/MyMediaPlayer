@@ -30,3 +30,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     video.h
+
+TRANSLATIONS = languages/MyMediaPlayer_en.ts \
+               languages/MyMediaPlayer_vi.ts
