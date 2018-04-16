@@ -33,11 +33,11 @@
         <file>icon/tri.png</file>
         <file>PlayVideo.qml</file>
         <file>icon/dt.jpg</file>
-        <file>video/BRav1.avi</file>
-        <file>video/bloh.mp4</file>
         <file>languages/MyMediaPlayer_vi.ts</file>
         <file>languages/MyMediaPlayer_en.ts</file>
         <file>languages/MyMediaPlayer_vi.qm</file>
         <file>languages/MyMediaPlayer_en.qm</file>
+        <file>DialogLanguages.qml</file>
+        <file>icon/glanguages.png</file>
     </qresource>
 </RCC>
