@@ -120,6 +120,15 @@ Window {
                                 anchors.left: parent.left
                                 anchors.leftMargin: 0
                                 source: "icon/gabout.png"
+                                MouseArea{
+                                    anchors.fill: parent
+                                    onClicked: {
+                                        dialogInfo.visible = true
+
+
+                                    }
+                                }
+
                             }
 
                             MyButton {
@@ -137,7 +146,6 @@ Window {
                                 MouseArea{
                                     anchors.fill: parent
                                     onClicked: {
-//                                        dialogLanguages.state = "on"
                                         dialogLanguages.visible = true
 
 
@@ -241,10 +249,13 @@ Window {
 
         DialogLanguages{
             id:dialogLanguages
-//            opacity: 0
             visible: false
         }
 
+        DialogInfo{
+            id: dialogInfo
+            visible: false
+        }
     }
 
 }

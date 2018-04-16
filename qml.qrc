@@ -39,5 +39,6 @@
         <file>languages/MyMediaPlayer_en.qm</file>
         <file>DialogLanguages.qml</file>
         <file>icon/glanguages.png</file>
+        <file>DialogInfo.qml</file>
     </qresource>
 </RCC>
