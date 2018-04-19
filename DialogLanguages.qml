@@ -27,7 +27,8 @@ Dialog {
             height: 30
             width: 200
             anchors.horizontalCenter: clLan.horizontalCenter
-            model: [ qsTr("Vietnamese"), qsTr("English") ]
+            model: [ qsTr("English"), qsTr("Vietnamese") ]
+            currentIndex: clanguages.getLanguage()
             signal languageSignal(int msg)
         }
         Button{
@@ -37,7 +38,7 @@ Dialog {
             MouseArea{
                 anchors.fill: parent
                 onClicked: {
-                    cbbox.languageSignal(cbbox.currentIndex)
+                    clanguages.changeLanguage(cbbox.currentIndex)
                     close()
                 }
             }

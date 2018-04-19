@@ -148,7 +148,6 @@ Window {
                                     onClicked: {
                                         dialogLanguages.visible = true
 
-
                                     }
                                 }
                             }
@@ -257,5 +256,4 @@ Window {
             visible: false
         }
     }
-
 }

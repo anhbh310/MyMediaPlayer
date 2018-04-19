@@ -40,5 +40,6 @@
         <file>DialogLanguages.qml</file>
         <file>icon/glanguages.png</file>
         <file>DialogInfo.qml</file>
+        <file>video/bloh.mp4</file>
     </qresource>
 </RCC>
