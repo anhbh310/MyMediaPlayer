@@ -120,6 +120,15 @@ Window {
                                 anchors.left: parent.left
                                 anchors.leftMargin: 0
                                 source: "icon/gabout.png"
+                                MouseArea{
+                                    anchors.fill: parent
+                                    onClicked: {
+                                        dialogInfo.visible = true
+
+
+                                    }
+                                }
+
                             }
 
                             MyButton {
@@ -127,13 +136,20 @@ Window {
                                 x: 0
                                 y: 210
                                 height: 70
-                                text: qsTr("Setting")
+                                text: qsTr("Languages")
                                 toggle: true
                                 anchors.right: parent.right
                                 anchors.rightMargin: 0
                                 anchors.left: parent.left
                                 anchors.leftMargin: 0
-                                source: "icon/gsetting.png"
+                                source: "icon/glanguages.png"
+                                MouseArea{
+                                    anchors.fill: parent
+                                    onClicked: {
+                                        dialogLanguages.visible = true
+
+                                    }
+                                }
                             }
 
                         }
@@ -230,6 +246,14 @@ Window {
 
         }
 
-    }
+        DialogLanguages{
+            id:dialogLanguages
+            visible: false
+        }
 
+        DialogInfo{
+            id: dialogInfo
+            visible: false
+        }
+    }
 }

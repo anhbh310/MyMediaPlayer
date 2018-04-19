@@ -4,15 +4,8 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.9
 
 Column{
-//    id: media_player
     width: parent.width
     height: parent.height
-
-//    Image{
-//        width: parent.width
-//        height: parent.height - 100
-//        source: "icon/dt.jpg"
-//    }
 
     Rectangle{
         width: parent.width
